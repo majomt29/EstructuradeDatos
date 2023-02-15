@@ -1,0 +1,53 @@
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+#include <string>
+
+using namespace std;
+
+int main()
+{
+   int X, meses,anos,ano;
+   float RCIVA=X*0.13, AFP=X*0.1271, bonoantiguedad, totalganado, totaldescuento, liquidopagable;
+   string nombrecompleto;
+   
+   cout<<"Ingrese el nombre completo"<<endl;
+   getline (cin,nombrecompleto);
+   cout<<"Ingrese cuanto es su sueldo mensual"<<endl;
+   cin>>X;
+   cout<<"Ingrese la cantidad de anos trabajados"<<endl;
+   cin>>anos;
+   
+   if(anos<1)
+   {
+   bonoantiguedad=0;
+   }
+   else
+   {
+       if(ano>=2 && ano<=4)
+       {
+           bonoantiguedad=X+(X*0.05);
+       }
+       
+       else 
+       {
+           if(ano>=5 && ano<=7)
+           {
+               bonoantiguedad=X+(X*0.11);
+           }
+           
+           else
+           {
+               if(ano>=8 && ano<=10)
+               {
+                   bonoantiguedad=X+(X*0.18);
+               }
+           }
+       }
+   }
+   
+   
+   
+
+    return 0;
+}
