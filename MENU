@@ -1,0 +1,137 @@
+#include <iostream>
+#include "stdlib.h"
+
+using namespace std;
+
+//prototipos
+void triangulo();
+void hermano();
+void pesodeunacarta();
+
+//main
+void main()
+{
+	int opcion;
+	do
+	{
+		cout << "***MENU***" << endl;
+		cout << "==========" << endl << endl;
+		cout << "1. Calcular el area de un triangulo" << endl;
+		cout << "2. Saber que hermano es el amyor y cual es el menor" << endl;
+		cout << "3. Saber el peso de una carta" << endl;
+		cout << "Ingrese la opcion:";
+		cin >> opcion;
+		switch (opcion)
+		{
+			case 1: triangulo();
+				break;
+			case 2: hermano();
+				break;
+			case 3: pesodeunacarta();
+				break;
+			case 0: cout<<"Salir";
+				break;
+			default:cout << "Opcion invalida";
+				break;
+		}
+		system("pause");
+		system("cls");
+	} while (opcion != 0);
+
+}
+//funciones
+
+void triangulo()
+{
+	float a, b, area;
+	cout << "Ingrese la base:";
+	cin >> a;
+	cout << "Ingrese la altura:";
+	cin >> b;
+	area = (a * b) / 2;
+	cout << "El area del triangulo es:" << area;
+}
+
+void hermano()
+{
+	float  hermano1, hermano2, hermano3, mayor, menor, hermanomenor, hermanomayor, may, men;
+	cout << "Ingresar edad de hermano1";
+	cin >> hermano1;
+	cout << "Ingresar edad de hermano2";
+	cin >> hermano2;
+	cout << "Ingresar edad de hermano";
+	cin >> hermano3;
+	may = hermano1;
+	men = hermano1;
+	if (may < hermano1)
+		may = hermano1;
+
+	if (men > hermano1)
+		men = hermano1;
+
+	if (may < hermano2)
+		may = hermano2;
+
+	if (men > hermano2)
+		men = hermano2;
+
+	if (may < hermano3)
+		may = hermano3;
+
+	if (men > hermano3)
+		men = hermano3;
+
+	cout << " El mas grande es:  " <<may;
+	cout << " El mas pequeño es:  " <<men;
+}
+
+void pesodeunacarta()
+{
+	float P, C;
+
+
+	cout << "Introducir el peso de la carta: P" << endl;
+	cin >> P;
+	if (P > 500)
+	{
+		cout << "No puede enviar como carta";
+	}
+	else {
+		if (P > 350)
+		{
+			C = 15;
+		}
+		else
+		{
+			if (P > 200)
+			{
+				C = 10.5;
+
+			}
+			else
+			{
+				if (P > 100)
+				{
+					C = 6;
+				}
+				else
+				{
+					if (P > 50)
+					{
+						C = 4;
+					}
+					else
+					{
+						C = 1.5;
+					}
+				}
+			}
+		}
+		cout << "El valor de la carta es: " << C;
+	}
+
+
+
+
+
+}
