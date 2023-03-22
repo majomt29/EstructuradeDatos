@@ -1,0 +1,7 @@
+while True:
+    print("Menu")
+    print("Elija una opcion")
+    print("1. Masa corporal")
+    print("2.Edad de una persona")
+    print("3.Potencia de un numero")
+    print("0. Si desea salir")
